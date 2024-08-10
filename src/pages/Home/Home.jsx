@@ -2,8 +2,10 @@
 
 const Home = () => {
   return (
-    <div>
-      Home
+    <div className="h-[1600px]">
+    <div className="h-96">
+      dddddddddd
+    </div>
     </div>
   );
 };
