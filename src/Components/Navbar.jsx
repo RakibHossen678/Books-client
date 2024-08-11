@@ -40,7 +40,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center text-base tap-8">
           <Link
             to="/"
-            className="text-2xl font-bold text-blue-700 items-center gap-2"
+            className={`${
+              isSticky ? "text-white " : ""
+            }text-2xl font-bold text-blue-700 items-center gap-2`}
           >
             <FaBlog className="inline-block" />
             Books
@@ -50,7 +52,9 @@ const Navbar = () => {
             {navItem.map((item, idx) => (
               <li key={idx}>
                 <Link
-                  className="text-black  text-base inline uppercase cursor-pointer hover:text-blue-700"
+                  className={`text-black  text-base inline uppercase cursor-pointer hover:text-blue-700 ${
+                    isSticky ? "text-white" : ""
+                  }`}
                   to={item.path}
                 >
                   {item.link}
@@ -59,7 +63,9 @@ const Navbar = () => {
             ))}
           </ul>
           <button className="space-x-12 hidden lg:flex items-center">
-            <FaBarsStaggered className="hover:text-blue-700 w-5 " />
+            <FaBarsStaggered
+              className={`hover:text-blue-700 w-5 ${isSticky ? "text-white" : ""}`}
+            />
           </button>
           {/*menu btn for mobile device*/}
           <div className="md:hidden">
