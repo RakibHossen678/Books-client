@@ -1,8 +1,8 @@
-import BannerCard from "../pages/Home/BannerCard";
+import BannerCard from "../pages/Home/BannerCard/BannerCard";
 
 const Banner = () => {
   return (
-    <div className="px-4 lg:px-24 bg-teal-100 flex items-center">
+    <div className="px-4 lg:px-24 bg-teal-100 flex items-center lg:h-screen">
       <div className="flex w-full flex-col md:flex-row justify-between items-center gap-12 py-40">
         <div className="md:w-1/2 space-y-8 h-full">
           <h2 className="text-5xl font-bold leading-snug text-black">
