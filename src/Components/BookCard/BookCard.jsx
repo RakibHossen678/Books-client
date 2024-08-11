@@ -7,11 +7,11 @@ import "./BookCard.css";
 import { FaCartShopping } from "react-icons/fa6";
 const BookCard = ({ books, headline }) => {
   return (
-    <div className="my-16 lg:24 px-4">
+    <div className="my-16 lg:24 px-4 mt-12">
       <h2 className="text-5xl text-center font-bold text-black my-5">
         {headline}
       </h2>
-      <div>
+      <div className="">
         {" "}
         <Swiper
           slidesPerView={1}
@@ -38,13 +38,13 @@ const BookCard = ({ books, headline }) => {
             },
           }}
           modules={[Pagination]}
-          className="mySwiper h-full w-full"
+          className="mySwiper h-full w-full mt-12"
         >
           {books.map((book) => (
             <SwiperSlide key={book._id}>
               <Link to={`/book/${book._id}`}>
                 <div className="relative">
-                  <img className="w-full h-full" src={book.imageURL} alt="" />
+                  <img className="w-full h-full object-cover bg-cover " src={book.imageURL} alt="" />
                   <div className="bg-blue-600 top-3 right-3  absolute hover:bg-black p-2 rounded-lg">
                     <FaCartShopping className="w-4 h-4  text-white"></FaCartShopping>
                   </div>
