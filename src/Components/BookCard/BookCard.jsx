@@ -12,7 +12,6 @@ const BookCard = ({ books, headline }) => {
         {headline}
       </h2>
       <div className="">
-        {" "}
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -44,17 +43,21 @@ const BookCard = ({ books, headline }) => {
             <SwiperSlide key={book._id}>
               <Link to={`/book/${book._id}`}>
                 <div className="relative">
-                  <img className="w-full h-full object-cover bg-cover " src={book.imageURL} alt="" />
+                  <img
+                    className="w-full h-full object-cover bg-cover "
+                    src={book.imageURL}
+                    alt=""
+                  />
                   <div className="bg-blue-600 top-3 right-3  absolute hover:bg-black p-2 rounded-lg">
                     <FaCartShopping className="w-4 h-4  text-white"></FaCartShopping>
                   </div>
-                  <div>
+                  <div className="flex  justify-between items-center pt-3">
                     <div>
-                      <h3>{book.bookTitle}</h3>
-                      <p>{book.authorName}</p>
+                      <h3 className="text-sm font-bold">{book.bookTitle}</h3>
+                      <p className="text-sm pt-3">{book.authorName}</p>
                     </div>
                     <div>
-                      <p>$10.00</p>
+                      <p className="font-bold text-blue-600">$10.00</p>
                     </div>
                   </div>
                 </div>
